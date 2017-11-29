@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <div style="width="500px" height="500px" id="colorDiv"></div>
+    <input id="color1RGB" max="255" step="1" min="0" type="range" />
+    <input id="color2RGB" max="255" step="1" min="0" type="range" />
+    <input id="color3RGB" max="255" step="1" min="0" type="range" />
+    <input id="transparencyRGB" max="1" step="0.01" min="0" type="range" />
+  </body>
+  <script>
+  var div =  document.getElementById('colorDiv');
+  var color1 = document.getElementById('color1RGB');
+  var color2 = document.getElementById('color2RGB');
+  var color3 = document.getElementById('color3RGB');
+  var transparency = document.getElementById('transparencyRGB');
+  setInterval( function() {
+    div.innerHTML = 'rgba(' + color1.value + ', ' + color2.value + ', ' + color3.value + ', ' + transparency.value + ');';
+    div.style.backgroundColor = 'rgba(' + color1.value + ', ' + color2.value + ', ' + color3.value + ', ' + transparency.value + ');';
+  }, 50);
+  </script>
+</html>
