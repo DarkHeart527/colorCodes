@@ -9,10 +9,10 @@
   <body>
     <div style="width:500px; height:500px;" id="colorDiv"></div>
     <div>
-      R <input id="color1RGB" max="255" step="1" min="0" type="range" value="0"/><span id="color1Text"></span><br />
-      G <input id="color2RGB" max="255" step="1" min="0" type="range" value="0" /><span id="color2Text"></span><br />
-      B <input id="color3RGB" max="255" step="1" min="0" type="range" value="0" /><span id="color3Text"></span><br />
-      <input id="transparencyRGB" max="1" step="0.01" min="0" type="range" value="1" /><span id="transparency1Text"></span><br />
+      R - <input id="color1RGB" max="255" step="1" min="0" type="range" value="0"/><span id="color1Text"></span><br />
+      G - <input id="color2RGB" max="255" step="1" min="0" type="range" value="0" /><span id="color2Text"></span><br />
+      B - <input id="color3RGB" max="255" step="1" min="0" type="range" value="0" /><span id="color3Text"></span><br />
+      Transparency - <input id="transparencyRGB" max="1" step="0.01" min="0" type="range" value="1" /><span id="transparency1Text"></span><br />
     </div>
   </body>
   <script>
@@ -26,7 +26,7 @@
     document.getElementById('color1Text').innerHTML = color1.value;
     document.getElementById('color2Text').innerHTML = color2.value;
     document.getElementById('color3Text').innerHTML = color3.value;
-    
+    document.getElementById('transparency1Text').innerHTML = transparency.value;
     div.style.backgroundColor = 'rgba(' + color1.value + ', ' + color2.value + ', ' + color3.value + ', ' + transparency.value + ')';
   }, 50);
   </script>
